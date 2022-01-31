@@ -1,0 +1,3 @@
+// rename to .env
+BINANCE_API_KEY_PROD=""
+BINANCE_API_SECRET_PROD=""
