@@ -14,9 +14,7 @@
 		"glob-all": "^3.2.1"
 	},
 	"scripts": {
-		"prestart": "yarn build",
-		"start": "node .",
-		"build": "node esbuild.js"
+		"start": "node ."
 	},
 	"dependencies": {
 		"@binance/connector": "^1.6.0",
