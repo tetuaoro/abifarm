@@ -1,6 +1,6 @@
 {
 	"name": "abifarm",
-	"version": "1.2.7",
+	"version": "1.3.1",
 	"description": "Find the best path to make an arbitrage strategy",
 	"main": "build/index.js",
 	"license": "MIT",
@@ -9,12 +9,15 @@
 		"@types/inline-css": "^3.0.1",
 		"@types/lodash": "^4.14.178",
 		"@types/node": "^17.0.5",
+		"@types/node-cron": "^3.0.1",
 		"@types/ws": "^8.2.2",
-		"esbuild": "^0.14.14",
-		"glob-all": "^3.2.1"
+		"esbuild": "^0.14.14"
 	},
 	"scripts": {
-		"start": "node ."
+		"prestart": "yarn build",
+		"start": "node .",
+		"build": "node esbuild.js",
+		"postbuild": "cp -r src/template build/"
 	},
 	"dependencies": {
 		"@binance/connector": "^1.6.0",
@@ -23,6 +26,7 @@
 		"hogan.js": "^3.0.2",
 		"inline-css": "^3.0.0",
 		"lodash": "^4.17.21",
+		"node-cron": "^3.0.0",
 		"ws": "^8.4.2"
 	}
 }
